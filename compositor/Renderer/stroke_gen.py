@@ -38,11 +38,11 @@ def read_img(img_path, img_type='RGB'):
     img = img.transpose((2, 0, 1))
     img = torch.from_numpy(img).unsqueeze(0).float() / 255.
     return img
-brush_large_vertical = read_img('brush/brush_large_vertical.png', 'L').cuda()
-brush_large_horizontal = read_img('brush/brush_large_horizontal.png', 'L').cuda()
+brush_large_vertical = read_img('/content/Compositional_Neural_Painter/brush/brush_large_vertical.png', 'L').cuda()
+brush_large_horizontal = read_img('/content/Compositional_Neural_Painter/brush/brush_large_horizontal.png', 'L').cuda()
 meta_brushes = torch.cat([brush_large_vertical, brush_large_horizontal], dim=0)
-brush_large_vertical_pad = read_img('brush/brush_large_vertical_pad.png', 'L').cuda()
-brush_large_horizontal_pad = read_img('brush/brush_large_horizontal_pad.png', 'L').cuda()
+brush_large_vertical_pad = read_img('/content/Compositional_Neural_Painter/brush/brush_large_vertical_pad.png', 'L').cuda()
+brush_large_horizontal_pad = read_img('/content/Compositional_Neural_Painter/brush/brush_large_horizontal_pad.png', 'L').cuda()
 meta_brushes_pad = torch.cat([brush_large_vertical_pad, brush_large_horizontal_pad], dim=0)
 def draw_oil(param, size=128):
     # param: b, 12
