@@ -24,7 +24,7 @@ parser.add_argument('--painter', default='/content/Compositional_Neural_Painter/
 parser.add_argument('--renderer', default='/content/Compositional_Neural_Painter/compositor/renderer-oil.pkl', type=str, help='renderer model')
 parser.add_argument('--img_path', default='test-img/1.jpg', type=str, help='test image')
 parser.add_argument('--mode', default=1, type=int, help='mode=1:compositor painting with size=512, mode=2:compositor painting with size=128, mode=3:5*5 blocks')
-parser.add_argument('--video', default= action='store_true', help='wheter to save_vedio')
+parser.add_argument('--video', action='store_true', help='wheter to save_vedio')
 parser.add_argument('--video_path', default='/content/Compositional_Neural_Painter/compositor/imgs/vid_out.avi', type=str, help='Path to save the video')
 
 args = parser.parse_args()
