@@ -32,7 +32,7 @@ if args.video:
     size=(512,512)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     videoWriter = cv2.VideoWriter('./video.avi', fourcc, fps, size)
-    frame = cv2.imread('black.jpg')
+    frame = cv2.imread('/content/Compositional_Neural_Painter/imgs/black.jpg')
     frame = cv2.resize(frame, size)
     videoWriter.write(frame)
     videoWriter.write(frame)
