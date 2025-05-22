@@ -244,5 +244,13 @@ else:
         output = small2large(output)
         output = (output * 255).astype('uint8')
         output = cv2.resize(output, origin_shape)
-        cv2.imwrite('output.png', output)
+        cv2.imwrite('/content/Compositional_Neural_Painter/imgs/output.jpg', output)
+
+        
+        cv2.imshow('Displayed Image', image)
+        # Wait for a key press and close the window
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+
 
