@@ -247,7 +247,7 @@ else:
         cv2.imwrite('/content/Compositional_Neural_Painter/imgs/output.jpg', output)
 
         
-        cv2.imshow('Displayed Image', image)
+        cv2.imshow('Displayed Image', output)
         # Wait for a key press and close the window
         cv2.waitKey(0)
         cv2.destroyAllWindows()
