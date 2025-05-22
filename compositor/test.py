@@ -172,7 +172,7 @@ if args.mode!=3:
         losses+=float(pixel_loss.detach())
         canvas=final_decode()
         pixel_loss = loss_mse(canvas, image)
-        save_image(canvas[:, [2, 1, 0]], 'output.png', nrow=1, normalize=False)
+        save_image(canvas[:, [2, 1, 0]], '/content/Compositional_Neural_Painter/imgs/output.jpg', nrow=1, normalize=False)
     print('MSE Distance',losses)
     if args.video:
         videoWriter.release()
