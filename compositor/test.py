@@ -19,9 +19,9 @@ width = 128*4
 
 parser = argparse.ArgumentParser(description='Learning to Paint')
 parser.add_argument('--stroke_num', default=5000, type=int, help='max length for episode')
-parser.add_argument('--compositor', default='compositor/checkpoints/compositor.pkl', type=str, help='Actor model')
-parser.add_argument('--painter', default='painter/checkpoints/painter.pkl', type=str, help='Actor model')
-parser.add_argument('--renderer', default='compositor/renderer-oil.pkl', type=str, help='renderer model')
+parser.add_argument('--compositor', default='/content/Compositional_Neural_Painter/compositor/compositor.pkl', type=str, help='Actor model')
+parser.add_argument('--painter', default='/content/Compositional_Neural_Painter/compositor/painter.pkl', type=str, help='Actor model')
+parser.add_argument('--renderer', default='/content/Compositional_Neural_Painter/compositor/renderer-oil.pkl', type=str, help='renderer model')
 parser.add_argument('--img_path', default='test-img/1.jpg', type=str, help='test image')
 parser.add_argument('--mode', default=1, type=int, help='mode=1:compositor painting with size=512, mode=2:compositor painting with size=128, mode=3:5*5 blocks')
 parser.add_argument('--video',  action='store_true', help='wheter to save_vedio')
